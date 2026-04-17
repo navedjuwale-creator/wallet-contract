@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")"
+export PATH="$PWD/toolchain/bin:$PATH"
+./check-prereqs.sh
+cd func
+./build.sh
